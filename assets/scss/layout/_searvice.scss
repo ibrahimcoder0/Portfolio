@@ -1,0 +1,49 @@
+@use '../utils' as *;
+
+.ic-service-item {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  box-shadow: 0px 15px 40px -10px rgba(168, 183.00000000000003, 255, 0.67);
+  border-radius: 5px;
+  padding: 35px;
+  transition: 0.3s;
+  @media #{$xl}{
+     		height: 350px;
+    	}
+  @media #{$lg}{
+     		height: 380px;
+    	}
+  @media #{$sm}{
+     		height: 350px;
+    	}
+  &:hover {
+    box-shadow: 0px 0px 10px 0px #c3cdff;
+  }
+  & i {
+    color: var(--ic-theme-1);
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  & a {
+    background-repeat: no-repeat;
+    background-size: 0% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    transition: background-size 0.4s linear;
+    background-image: linear-gradient(#006ad7, #006ad7),
+      linear-gradient(#006ad7, #006ad7);
+  }
+  &:hover a {
+    background-size: 0% 2px, 100% 2px;
+  }
+}
+
+a.ic-btn-normal {
+  & i {
+    font-size: 15px;
+    color: var(--ic-theme-1);
+    font-weight: 600;
+    margin-left: 7px;
+  }
+}

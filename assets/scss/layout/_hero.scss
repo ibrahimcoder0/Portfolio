@@ -1,0 +1,79 @@
+@use '../utils' as *;
+
+.ic-hero-content {
+  & h6 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  & h2 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    line-height: 1;
+    color: var(--ic-theme-1);
+    text-transform: uppercase;
+    @media #{$lg}{
+     		font-size: 40px;
+    	}
+      @media #{$sm}{
+     		font-size: 30px;
+    	}
+  }
+  & h4 {
+    color: var(--ic-theme-2);
+    font-size: 25px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+}
+
+.ic-expeart-wrapper {
+  width: auto !important;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 30px;
+  padding: 8px 20px;
+  border: 1px solid var(--ic-border-1);
+  & h5 {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+.ic-expeart-img {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.ic-hero-content h6 {
+  animation-delay: 0.3s;
+  animation-duration: 0.3s;
+}
+.ic-hero-content h2 {
+  animation-delay: 0.5s;
+  animation-duration: 0.5s;
+}
+.ic-hero-content h4 {
+  animation-delay: 0.7s;
+  animation-duration: 0.7s;
+}
+.ic-hero-content p {
+  animation-delay: 0.7s;
+  animation-duration: 0.7s;
+}
+.ic-hero-content .ic-btn {
+  animation-delay: 0.9s;
+  animation-duration: 0.9s;
+}
+.ic-hero-content h6,
+.ic-hero-content h2,
+.ic-hero-content h4,
+.ic-hero-content p,
+.ic-hero-content .ic-btn {
+  animation-name: fadeInUp;
+  animation-fill-mode: both;
+}

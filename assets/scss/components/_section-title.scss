@@ -1,0 +1,41 @@
+@use '../utils' as *;
+
+.ic-section-title {
+  color: var(--ic-theme-1);
+  font-size: 48px;
+  font-weight: 700;
+  @media #{$lg} {
+    font-size: 40px;
+  }
+  @media #{$md} {
+    font-size: 30px;
+  }
+  @media #{$sm} {
+    font-size: 30px;
+  }
+}
+.ic-section-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--ic-theme-2);
+  margin-bottom: 20px;
+  @media #{$md,$sm} {
+    font-size: 16px;
+  }
+}
+
+.ic-section-title {
+  animation-delay: 0.3s;
+  animation-duration: 0.3s;
+}
+.ic-section-subtitle {
+  animation-delay: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.ic-section-title,
+.ic-section-subtitle {
+  animation-name: fadeInUp;
+  animation-fill-mode: both;
+}

@@ -1,0 +1,151 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  00. BLOG CSS START
+/*----------------------------------------*/
+
+
+.ic-blog {
+  &-item {
+    margin: 15px;
+    &:hover {
+      & .ic-blog-thumb {
+        & img {
+          transform: scale(1.2);
+        }
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      & .ic-blog-icon {
+        top: 50%;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &-thumb {
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: rgba(22, 23, 26, 0.6);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+    & img {
+      width: 100%;
+      transition: 0.7s;
+    }
+  }
+  &-content {
+    margin: 0 30px;
+    margin-top: -30px;
+    background: var(--ic-common-white);
+    box-shadow: 0px 15px 40px -10px rgba(168, 183.00000000000003, 255, 0.67);
+    border-radius: 5px;
+    padding: 35px;
+    z-index: 1;
+    position: relative;
+    transition: .3s;
+    &:hover{
+      box-shadow: 0px 0px 10px 0px #C3CDFF;
+    }
+    @media #{$lg,$md,$xs} {
+      margin: 0 20px;
+      margin-top: -30px;
+    }
+    & .ic-blog-meta {
+        cursor: pointer;
+      & span {
+        font-size: 14px;
+        color: var(--ic-common-black);
+        font-weight: 500;
+        @media #{$xl}{
+     		font-size: 12px;
+    	}
+        & i {
+          font-size: 14px;
+          color: var(--ic-theme-1);
+          font-weight: 500;
+        }
+      }
+    }
+    & .ic-blog-title {
+      & a {
+        background-repeat: no-repeat;
+        background-size: 0% 2px, 0 2px;
+        background-position: 100% 100%, 0 100%;
+        transition: background-size 0.4s linear;
+        background-image: linear-gradient(#006ad7, #006ad7),
+          linear-gradient(#006ad7, #006ad7);
+      }
+      &:hover a {
+        background-size: 0% 2px, 100% 2px;
+      }
+    }
+  }
+  &-icon {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transform: translate(-50%, -50%);
+    & a {
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      line-height: 65px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 25px;
+      background-color: var(--ic-theme-1);
+      color: var(--ic-common-white);
+    }
+  }
+}
+
+h3.ic-blog-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.blog-active.slick-slider{
+    position: relative;
+}
+.blog-active.slick-slider .slick-arrow i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(
+  --ic-theme-1);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: var(
+  --ic-common-white);
+    font-size: 18px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 24px 0px rgba(153, 171, 189, 0.25);
+    cursor: pointer;
+    z-index: 9;
+}
+.blog-active.slick-slider .slick-arrow i.fa-arrow-right {
+    left: auto;
+    right: 0;
+    cursor: pointer;
+    z-index: 9;
+}

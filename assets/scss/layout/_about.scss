@@ -1,0 +1,35 @@
+@use '../utils' as *;
+
+.progress {
+    display: flex;
+    height: 2rem;
+    overflow: hidden;
+    font-size: 14px;
+    background-color: var(--ic-theme-2);
+    border-radius: 0.25rem;
+    margin: 20px 0;
+    &-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--ic-common-white);
+    text-align: left;
+    padding-left: 15px;
+    white-space: nowrap;
+    background-color: var(--ic-theme-1);
+    transition: width 0.6s ease;
+}
+}
+
+
+
+.ic-about-content p{
+	animation-delay: 0.3s;
+	animation-duration: 0.3s;
+}
+
+.ic-about-content p{
+	animation-name: fadeInUp;
+	animation-fill-mode: both;
+}

@@ -1,0 +1,151 @@
+@use '../utils' as *;
+
+.ic-contact-item {
+  & i {
+    font-size: 40px;
+    color: var(--ic-theme-1);
+    font-weight: 400;
+  }
+}
+.ic-contact-text {
+  & h5 {
+    font-size: 25px;
+    color: var(--ic-common-black);
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+}
+.ic-contact-form {
+  & label {
+    color: var(--ic-common-black);
+    font-size: 20px;
+    font-weight: 500;
+  }
+  & input {
+    background: var(--ic-common-white);
+    border: 0;
+    width: auto;
+    height: 60px;
+    border-radius: 30px;
+    padding: 0px 25px;
+    box-shadow: 0px 4px 24px 0px rgba(153, 171, 189, 0.25);
+  }
+  & textarea {
+    border-radius: 30px;
+    border: 0;
+    background: var(--ic-common-white);
+    box-shadow: 0px 4px 24px 0px rgba(153, 171, 189, 0.25);
+    padding: 10px 25px;
+  }
+}
+
+textarea:focus-visible {
+  outline: none;
+}
+
+.ic-contact-3 {
+  &-item {
+    padding: 30px 15px;
+    box-shadow: 0px 15px 40px -10px rgba(168, 183.00000000000003, 255, 0.67);
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0px 0px 10px 0px #c3cdff;
+      & .ic-contact-3-icon {
+        & span {
+          text-align: center;
+          line-height: 80px;
+        }
+      }
+    }
+  }
+  &-icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: var(--ic-common-white);
+    display: inline-block;
+    position: relative;
+    & span {
+      transition: 0.3s;
+    }
+  }
+  &-title {
+    font-weight: 500;
+    font-size: 26px;
+  }
+  &-text {
+    margin-top: 70px;
+    & a {
+      font-weight: 500;
+      line-height: 26px;
+      background-repeat: no-repeat;
+      background-size: 0% 1px, 0 1px;
+      background-position: 100% 100%, 0 100%;
+      transition: background-size 0.4s linear;
+      background-image: linear-gradient(#727272, #727272),
+        linear-gradient(#727272, #727272);
+      &:hover {
+        background-size: 0% 1px, 100% 1px;
+      }
+    }
+  }
+}
+.ic-contact-form {
+  &-border {
+    border: 1px solid var(--ic-border-1);
+    padding: 100px;
+    @media #{$xl} {
+      padding: 60px 50px;
+    }
+    @media #{$lg} {
+      padding: 60px 50px;
+    }
+    @media #{$md,$xs} {
+      padding: 60px 0px;
+      border: none;
+    }
+  }
+  &-title {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 35px;
+    @media #{$lg,$md} {
+      font-size: 32px;
+    }
+    @media #{$xs} {
+      font-size: 25px;
+    }
+  }
+  &-input-box {
+    & textarea {
+      height: 165px;
+    }
+  }
+  &-bg {
+    padding: 80px 70px;
+    background-color: var(--ic-gray-1);
+    @media #{$md,$xs} {
+      padding: 40px 20px;
+    }
+  }
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+input[type='password'],
+input[type='url'],
+textarea {
+  outline: none;
+  background-color: var(--ic-common-white);
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  font-size: 16px;
+  color: var(--ic-common-black);
+  padding-left: 25px;
+  padding-right: 25px;
+  resize: none;
+  border: 1px solid transparent;
+}

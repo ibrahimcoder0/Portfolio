@@ -1,0 +1,106 @@
+@use '../utils' as *;
+
+.ic-portfolio-tab {
+  & ul {
+    border: 0;
+    & li {
+      display: inline-block;
+      & a {
+        color: var(--ic-common-black);
+        background: transparent;
+        border: 1px solid var(--ic-border-1);
+        padding: 8px 15px;
+        border-radius: 5px;
+        margin: 0 3px;
+        @media #{$sm} {
+          margin: 10px 3px;
+          padding: 7px 8px;
+        }
+      }
+    }
+  }
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  background: 0 0;
+  border: 1px solid var(--ic-border-1);
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: var(--ic-common-white) !important;
+  background-color: var(--ic-theme-1);
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border-color: var(--ic-border-1);
+  color: var(--ic-common-black);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  @media #{$md} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$sm} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid-item {
+  background-color: var(--ic-common-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0px 15px 40px -10px rgba(168, 183.00000000000003, 255, 0.67);
+  border-radius: 10px;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0px 0px 10px 0px #c3cdff;
+  }
+}
+.grid-item {
+  & a {
+    & img {
+      border-radius: 10px;
+    }
+  }
+}
+
+.ic-portfolio-pagi {
+  & ul {
+    & li {
+      display: inline-block;
+      transition: 0.3s;
+      & a {
+        padding: 8px 18px;
+        background: var(--ic-common-white);
+        border-radius: 5px;
+        margin: 0 3px;
+        font-size: 20px;
+        font-weight: 500;
+        transition: 0.3s;
+        @media #{$sm} {
+          padding: 7px 11px;
+    font-size: 15px;
+  }
+        &.ic-current {
+          background-color: var(--ic-theme-1) !important;
+          color: var(--ic-common-white);
+        }
+      }
+      &:hover {
+        & a {
+          color: var(--ic-common-white);
+          background: var(--ic-theme-1);
+        }
+      }
+    }
+  }
+}

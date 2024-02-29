@@ -1,0 +1,23 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  00. FOOTER CSS START
+/*----------------------------------------*/
+
+.ic-footer-social {
+  & ul {
+    & li {
+      display: inline-block;
+      padding: 5px 8px;
+      font-size: 20px;
+      background: var(--ic-theme-1);
+      margin: 0 5px;
+      border-radius: 30px;
+      color: var(--ic-common-white);
+      transition: .3s;
+      &:hover{
+        background: var(--ic-theme-2);
+      }
+    }
+  }
+}
