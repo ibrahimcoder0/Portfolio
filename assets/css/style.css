@@ -1802,6 +1802,7 @@ textarea {
   border-radius: 30px;
   color: var(--ic-common-white);
   transition: 0.3s;
+  float: right;
 }
 .ic-footer-social ul li:hover {
   background: var(--ic-theme-2);
